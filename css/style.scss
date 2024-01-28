@@ -108,9 +108,14 @@ body {
 // }
 @media (max-width: 767px) {
   .mobile_background_fixed {
-      background-attachment: fixed; /* Hace que la imagen de fondo sea fija */
-      background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
-      background-position: center; /* Centra la imagen de fondo */
+      // background-attachment: fixed; /* Hace que la imagen de fondo sea fija */
+      // background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+      // background-position: center; /* Centra la imagen de fondo */
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      background-attachment: scroll;
+      max-width: 100%;
   }
 }
 
