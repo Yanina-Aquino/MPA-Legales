@@ -1,0 +1,892 @@
+$black: #000000;
+$white: #ffffff;
+$primary1: #CBA864;
+
+
+
+
+@mixin main-font {
+  font-family: 'Poppins', sans-serif;
+}
+
+@mixin hero_btn($col1, $col2, $pad1, $pad2, $bRadius) {
+  display: inline-block;
+  padding: $pad1 $pad2;
+  background-color: transparent;
+  border: 1.5px solid $col1;
+  color: $col1;
+  border-radius: $bRadius;
+  transition: transform 0.3s;
+
+  &:hover {
+    background-color: $col1;
+    color: $col2;
+  }
+}
+
+@mixin upperBold {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+body {
+  @include main-font;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.layout_padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.layout_padding2 {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.layout_padding2-top {
+  padding-top: 45px;
+}
+
+.layout_padding2-bottom {
+  padding-bottom: 45px;
+}
+
+.layout_padding-top {
+  padding-top: 120px;
+}
+
+.layout_padding-bottom {
+  padding-bottom: 120px;
+}
+
+.heading_container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  h2 {
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 55px;
+      height: 5px;
+      background-color: $primary1;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+
+//MODIFICACIONES YA
+
+/*header section*/
+.hero_area {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/Hero/Hero1.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; /* Añadir esta propiedad */
+}
+
+@media (max-width: 767px) {
+  .hero_area {
+    background-attachment: fixed; /* Mantener el efecto parallax en dispositivos móviles */
+  }
+}
+
+.sub_page {
+  .hero_area {
+    height: auto;
+  }
+
+  .who_section.layout_padding {
+    padding-top: 0;
+  }
+}
+
+.hero_area.sub_pages {
+  height: auto;
+}
+
+.header_section {}
+
+.header_section .container-fluid {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.header_section .nav_container {
+  margin: 0 auto;
+}
+
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-item {
+  .nav-link {
+    margin: 10px 30px;
+    padding: 0;
+    padding-bottom: 3px;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 15px;
+
+    &::after {
+      display: none;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      border-radius: 5px;
+      background-color: $white;
+    }
+  }
+
+  &.active,
+  &:hover {
+    a {
+      &::after {
+        display: block;
+        background-color: $primary1;
+      }
+    }
+  }
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: initial;
+}
+
+.btn,
+.btn:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.user_option {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: $white;
+    margin: 10px 30px;
+  }
+}
+
+.custom_nav-container .nav_search-btn {
+  background-image: url(../images/search-icon.png);
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position-y: 7px;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  span {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $white;
+    position: relative;
+    z-index: 3;
+  }
+
+}
+
+.custom_nav-container {
+  z-index: 99999;
+  padding: 15px 0;
+}
+
+.custom_nav-container .navbar-toggler {
+  outline: none;
+}
+
+.custom_nav-container .navbar-toggler .navbar-toggler-icon {
+  background-image: url(../images/menu.png);
+  background-size: 55px;
+}
+
+/*end header section*/
+
+.slider_section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: $white;
+
+  #carouselExampleIndicators {
+    width: 100%;
+  }
+
+  .row {
+    align-items: center;
+  }
+
+  .box {
+    margin: 125px 0;
+  }
+
+  .detail-box {
+    text-align: center;
+
+    h1,
+    h2,
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      letter-spacing: .5rem;
+    }
+
+
+
+    p {
+      margin-top: 25px;
+    }
+
+    a {
+      @include hero_btn($white, $black, 8px, 35px, 0px);
+      text-transform: uppercase;
+      margin-top: 35px;
+    }
+  }
+
+
+
+  #carouselExampleIndicators {
+    .carousel-indicators {
+      position: unset;
+      margin: 0;
+      margin-top: 45px;
+      align-items: center;
+
+      li {
+        width: 14px;
+        height: 14px;
+        background-color: transparent;
+        border: 2px solid $white;
+        border-radius: 100%;
+        opacity: 1;
+
+        &.active {
+          border: 4px solid $white;
+        }
+      }
+    }
+  }
+}
+
+
+.texto-azul-oscuro {
+  color: #CBA864; /* Cambia este valor por el color azul oscuro que desees */
+}
+
+// end slider section
+
+
+// NOSOTROS 
+
+.us_section {
+  background-image: url(../images/Hero/Hero2.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: $white;
+
+  .us_container {
+    padding-top: 25px;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 25px 10px 0 10px;
+
+      .img-box {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .detail-box {
+        h5 {
+
+        }
+      }
+    }
+  }
+}
+
+
+.hover-img img {
+  transition: all 0.3s ease;
+}
+
+.hover-img:hover img {
+  filter: grayscale(100%) sepia(100%) hue-rotate(180deg); /* Cambia la imagen a escala de grises y la gira 180 grados al hacer hover */
+}
+
+.hover-box{
+  margin-top: 10px;
+}
+
+.hover-box a {
+  color: white; /* Cambiar el color del texto a blanco cuando no está clickeado */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+  margin-top: 20px;
+}
+
+.hover-box:hover a {
+  color: #CBA864; /* Cambiar el color del texto a marrón al hacer hover */
+}
+.img-box.hover-img {
+  height: 100px; /* Ajustar el alto según sea necesario */
+}
+
+.detail-box.hover-box {
+  height: 50px; /* Ajustar el alto según sea necesario */
+}
+
+.link-areas {
+  display: inline-block;
+  padding: 5px 10px; /* Ajustar el tamaño del botón */
+  margin-top: 10px; /* Agregar espacio arriba */
+  margin-bottom: 10px; /* Agregar separación con otros divs */
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff !important; /* Cambiar el color del texto a blanco */
+  border-radius: 0;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Agregar transición para el cambio de color */
+  text-transform: uppercase;
+}
+.link-areas a  {
+
+  color: #ffffff !important; /* Cambiar el color del texto a blanco */
+
+}
+.link-areas:hover {
+  background-color: #CBA864; /* Cambiar el fondo a marrón en efecto hover */
+  color: white; /* Cambiar el color del texto a blanco en efecto hover */
+}
+.area-titulo h5{
+  font-size: 1rem;
+}
+
+// end us section
+
+//NOSTOROS YA
+
+/* Estilo para la sección "Nosotros" */
+.us_section {
+  padding: 50px 0;
+}
+
+/* Estilo para las imágenes */
+.us_section img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el texto */
+.us_section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.texto-blanco {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+
+.nosotros {
+  background-color: #24283E;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  padding-bottom: 100px; /* Agregar espacio en la parte inferior */
+
+  h2 {
+    font-weight: bold;
+    position: relative; /* Añadir posición relativa al título */
+  }
+
+  h2::after {
+    content: '';
+    position: absolute;
+    width: 60px; /* Ancho de la línea */
+    height: 2px; /* Grosor de la línea */
+    background-color: #CBA864; /* Color marrón */
+    bottom: -10px; /* Posicionar debajo del título */
+    left: 0; /* Alinear a la izquierda */
+  }
+
+  p {
+    margin-top: 35px;
+  }
+
+  .btn-box {
+    display: flex;
+    justify-content: left;
+    margin-top: 45px;
+
+    a {
+      @include hero_btn($white, $black, 8px, 35px, 0);
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+
+
+
+//MAS INFO YA
+
+.more-info_section {
+  background-image: url(../images/Hero/Hero6.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333; /* Color de texto */
+}
+
+.more-info-title {
+  color: #24283E; /* Color del título */
+  font-size: 0.9rem; /* Tamaño de fuente del título */
+  text-align: center; /* Centrar el texto */
+}
+
+.more-info-detail p {
+  font-size: 0.8rem; /* Tamaño de fuente del texto */
+  text-align: center; /* Centrar el texto */
+}
+
+.more-info-img img {
+  width: 100%;
+}
+
+.more-info-box {
+  margin-bottom: 20px;
+}
+.more-info-box:hover {
+  background-color: rgba(255, 255, 255, 0.209); /* Fondo blanco transparente */
+  cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+
+.text-left h2 {
+  font-size: 1.5rem; /* Tamaño de fuente del título */
+  color: #fff; /* Color del título */
+}
+
+.text-left p {
+  font-size: 1rem; /* Tamaño de fuente del texto */
+}
+
+/* Estilos CSS */
+.text-container {
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo transparente */
+  padding: 20px; /* Espaciado interno */
+  max-width: 80%; /* Limita el ancho */
+  margin: auto; /* Centra horizontalmente */
+}
+
+.text-left {
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.link-mas {
+  display: inline-block;
+  padding: 5px 10px; /* Ajustar el tamaño del botón */
+  margin-top: 10px; /* Agregar espacio arriba */
+  margin-bottom: 10px; /* Agregar separación con otros divs */
+  background-color: #24283E;
+  border: 1px solid white;
+  border-radius: 0;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Agregar transición para el cambio de color */
+  text-transform: uppercase;
+}
+.link-mas a  {
+
+  color: white !important; /* Cambiar el color del texto a blanco */
+
+}
+.link-mas:hover {
+  background-color: #CBA864; /* Cambiar el fondo a marrón en efecto hover */
+  color: white; /* Cambiar el color del texto a blanco en efecto hover */
+}
+
+
+
+
+// heathy section
+
+.heathy_section {
+  background-image: url(../images/Hero/Hero3.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: $white;
+  text-align: center;
+
+  h2 {
+    font-weight: bold;
+  }
+
+  p {
+    margin-top: 35px;
+  }
+
+  .btn-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+
+    a {
+      @include hero_btn($white, $black, 8px, 35px, 0);
+      text-transform: uppercase;
+
+    }
+  }
+}
+
+// end heathy section
+
+
+
+
+
+// contact section
+.contact_section {
+  position: relative;
+  background-image: url(../images/Hero/Hero5.png);
+  color: $white;
+
+  .heading_container {
+    justify-content: start;
+
+    h2 {
+      &::before {
+        text-align: left;
+        left: 0;
+        transform: none;
+      }
+    }
+  }
+
+  .row {
+    align-items: center;
+  }
+
+  .img-box {
+    img {
+      width: 100%;
+    }
+  }
+
+
+
+  .form_container {
+    padding: 45px 0 45px 15px;
+
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    background-color: $white;
+    outline: none;
+    color: $black;
+    margin-top: 25px;
+    padding: 12px;
+
+    &::placeholder {
+      color: #2a2a2c;
+    }
+
+    &.message-box {
+      padding: 45px 12px;
+    }
+  }
+
+  button {
+    padding: 10px 65px;
+    outline: none;
+    border: none;
+    color: $white;
+    background: #CBA864;
+    margin: 45px 0 0 auto;
+    text-transform: uppercase;
+  }
+
+  .link-enviar:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Cambiar el fondo a marrón en efecto hover */
+    color: #24283E; /* Cambiar el color del texto a blanco en efecto hover */
+  }
+
+}
+
+// end contact section
+
+
+
+
+
+// info section
+.info_section {
+  background-color: #2b59a3;
+}
+
+.info_items {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  .item {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .img-box {
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .detail-box {
+      margin-top: 5px;
+      color: #fff;
+    }
+  }
+}
+
+.info_items {
+  position: relative;
+
+  a {
+    position: relative;
+  }
+
+  .item {
+    .img-box {
+      &.box-1 {
+        background-image: url(../images/location-white.png);
+      }
+
+      &.box-2 {
+        background-image: url(../images/telephone-white.png);
+      }
+
+      &.box-3 {
+        background-image: url(../images/envelope-white.png);
+      }
+    }
+  }
+}
+
+// end info section
+
+
+.footer {
+  background-color: #24283E;
+  padding: 20px 0px;
+  text-align: center;
+  color: white !important;
+
+.logoFooter {
+  padding: 20px, 0px;
+  text-align: left;
+}
+}
+
+.footer a {
+  color: white !important;
+}
+
+/* Estilos comunes para todos los iconos */
+.iconos-redes-sociales i {
+  width: 40px;
+  font-size: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+
+/* Estilos para el icono de LinkedIn */
+.iconos-redes-sociales .linkedin i {
+  color: #0a66c2; /* Color azul de LinkedIn */
+}
+
+/* Estilos para el icono de WhatsApp */
+.iconos-redes-sociales .whatsapp i {
+  color: #0dc144; /* Color verde de WhatsApp */
+}
+
+/* Estilos para el icono de Instagram */
+.iconos-redes-sociales .instagram i {
+  color: #fd00af; /* Color rosa de Instagram */
+}
+
+/* Efecto hover para cambiar la tonalidad */
+.iconos-redes-sociales a:hover {
+  filter: contrast(50%); /* Reducir la luminosidad al hacer hover */
+}
+
+.medium-text {
+  font-size: 16px;
+  
+}
+
+.separator {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.list-inline {
+  display: inline;
+}
+
+.list-inline-item {
+  display: inline;
+  margin-right: 5px;
+}
+
+.medium-text {
+  font-size: 16px;
+  color: white;
+}
+
+.medium-text:hover {
+  color: #CBA864 !important;
+}
+
+.derechos-de-autor p {
+  font-size: 10px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 60px; /* Ajusta el tamaño del ícono según sea necesario */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Agregar el efecto hover */
+.whatsapp-float img:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
+/* Estilos para mostrar el mensaje "¡Escribinos!" */
+.whatsapp-float a::before {
+  content: '¡Escribinos!';
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  background-color: #25D366; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 5px 10px; /* Espaciado interno */
+  border-radius: 5px;
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar el mensaje al hacer hover */
+/* Estilos para mostrar el mensaje "¡Escribinos!" */
+/* Estilos para el ícono de WhatsApp */
+.whatsapp-float img {
+  width: 60px; /* Tamaño original del ícono */
+}
+
+/* Redefinir tamaño del ícono en dispositivos móviles */
+@media (max-width: 767px) {
+  .whatsapp-float img {
+    width: 50px; /* Nuevo tamaño del ícono para dispositivos móviles */
+  }
+}
+
+/* Estilos para el mensaje "¡Escribinos!" */
+.whatsapp-float a::before {
+  content: '¡Escribinos!';
+  position: absolute;
+  bottom: calc(100% + 10px); /* Posición 10px arriba del ícono */
+  right: 50%;
+  transform: translateX(50%); /* Centrar horizontalmente */
+  background-color: #25D366; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 5px 10px; /* Espaciado interno */
+  border-radius: 5px;
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar el mensaje siempre en dispositivos móviles */
+@media (max-width: 767px) {
+  .whatsapp-float a::before {
+    opacity: 1; /* Mostrar siempre en dispositivos móviles */
+    bottom: calc(100% + 5px); /* Posición 5px arriba del ícono */
+    font-size: 12px; /* Tamaño del texto en dispositivos móviles */
+  }
+}
+
+/* Mostrar el mensaje al hacer hover */
+.whatsapp-float a:hover::before {
+  opacity: 1;
+}
