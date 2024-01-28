@@ -101,7 +101,10 @@ body {
 
 @media (max-width: 767px) {
   .hero_area {
-    background-attachment: fixed; /* Mantener el efecto parallax en dispositivos móviles */
+    background-attachment: fixed;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área disponible */
+    background-position: center; /* Centra la imagen */
+
   }
 }
 
