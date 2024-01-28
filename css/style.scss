@@ -90,10 +90,12 @@ body {
 
 /*header section*/
 .hero_area {
-  background-image: url('../images/Hero/Hero1.png');
+  background-image: url(../images/Hero/Hero1.png);
   background-size: cover;
-  background-position: center;
-  height: 100vh; /* Ajusta la altura según tus necesidades */
+  background-attachment: fixed;
+  // background-position: center; /* Añadir esta propiedad */
+  text-align: center;
+  color: $white;
 }
 @media (max-width: 767px) {
   .hero_area {
@@ -307,7 +309,7 @@ a:focus {
   #carouselExampleIndicators {
     .carousel-indicators {
       position: unset;
-      margin: 0;
+      margin: 40px;
       margin-top: 45px;
       align-items: center;
 
