@@ -99,11 +99,11 @@ body {
   background-position: center; /* Añadir esta propiedad */
 }
 
-// @media (max-width: 767px) {
-//   .hero_area {
-//     background-attachment: fixed; /* Mantener el efecto parallax en dispositivos móviles */
-//   }
-// }
+@media (max-width: 767px) {
+  .hero_area {
+    background-attachment: fixed; /* Mantener el efecto parallax en dispositivos móviles */
+  }
+}
 
 .sub_page {
   .hero_area {
