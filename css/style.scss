@@ -108,14 +108,10 @@ body {
 // }
 @media (max-width: 767px) {
   .mobile_background_fixed {
-      // background-attachment: fixed; /* Hace que la imagen de fondo sea fija */
-      // background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
-      // background-position: center; /* Centra la imagen de fondo */
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-position: center;
-      background-attachment: scroll;
-      max-width: 100%;
+      background-attachment: fixed; /* Hace que la imagen de fondo sea fija */
+      background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+      background-position: center; /* Centra la imagen de fondo */
+      
   }
 }
 
@@ -340,7 +336,8 @@ a:focus {
   background-image: url(../images/Hero/Hero2.png);
   background-size: cover;
   background-attachment: fixed;
-  background-position: center; /* Añadir esta propiedad */
+  // background-position: center; /* Añadir esta propiedad */
+  text-align: center;
   color: $white;
 
   .us_container {
