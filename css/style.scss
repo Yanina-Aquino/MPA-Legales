@@ -94,8 +94,7 @@ body {
 
   background-image: url(../images/Hero/Hero1.png);
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center; /* Añadir esta propiedad */
+  background-position: center;
 }
 
 // @media (max-width: 767px) {
@@ -107,13 +106,27 @@ body {
 //   }
 // }
 @media (max-width: 767px) {
-  .mobile_background_fixed {
-      background-attachment: fixed; /* Hace que la imagen de fondo sea fija */
-      background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
-      background-position: center; /* Centra la imagen de fondo */
-      
+  .hero_area {
+      background-attachment: scroll; /* Elimina el efecto parallax */
+      background-size: contain; /* Ajusta el tamaño de la imagen para que quepa dentro del contenedor */
+      height: 300px; /* Altura deseada para la imagen en dispositivos móviles */
+  }
+
+  .hero_area:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: inherit; /* Utiliza la misma imagen de fondo que .hero_area */
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+      z-index: -1; /* Coloca el pseudo-elemento detrás del contenido principal */
   }
 }
+
 
 .sub_page {
   .hero_area {
@@ -626,9 +639,10 @@ a:focus {
 
 
 @media (max-width: 767px) {
-.heathy_section {
-background-attachment: fixed; /* Mantener el efecto parallax en dispositivos móviles */
-}
+  .heathy_section {
+      background-attachment: scroll; /* Elimina el efecto parallax */
+      height: 300px; /* Altura deseada para la imagen en dispositivos móviles */
+  }
 }
 // end heathy section
 
