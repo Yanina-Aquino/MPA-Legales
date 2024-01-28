@@ -326,6 +326,7 @@ a:focus {
   background-image: url(../images/Hero/Hero2.png);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center; /* Añadir esta propiedad */
   color: $white;
 
   .us_container {
@@ -358,6 +359,12 @@ a:focus {
   }
 }
 
+
+@media (max-width: 767px) {
+.us_section {
+  background-attachment: fixed; /* Mantener el efecto parallax en dispositivos móviles */
+}
+}
 @media only screen and (max-width: 767px) {
   .layout_padding {
     padding-top: 25px; /* Reduce el padding-top en versión móvil */
@@ -500,7 +507,11 @@ a:focus {
   background-attachment: fixed;
   color: #333; /* Color de texto */
 }
-
+@media (max-width: 767px) {
+  .more-info_section {
+    background-attachment: fixed; /* Mantener el efecto parallax en dispositivos móviles */
+  }
+}
 .more-info-title {
   color: #24283E; /* Color del título */
   font-size: 0.9rem; /* Tamaño de fuente del título */
@@ -600,6 +611,13 @@ a:focus {
   }
 }
 
+
+
+@media (max-width: 767px) {
+.heathy_section {
+background-attachment: fixed; /* Mantener el efecto parallax en dispositivos móviles */
+}
+}
 // end heathy section
 
 
@@ -610,6 +628,9 @@ a:focus {
 .contact_section {
   position: relative;
   background-image: url(../images/Hero/Hero5.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; /* Añadir esta propiedad */
   color: $white;
 
   .heading_container {
@@ -634,7 +655,11 @@ a:focus {
     }
   }
 
-
+@media (max-width: 767px) {
+  .contact_section{
+    background-attachment: fixed; /* Mantener el efecto parallax en dispositivos móviles */
+  }
+}
 
   .form_container {
     padding: 45px 0 45px 15px;
