@@ -98,12 +98,19 @@ body {
   background-position: center; /* Añadir esta propiedad */
 }
 
-@media (max-width: 767px) {
-  .hero_area {
-    background-attachment: fixed;
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área disponible */
-    background-position: center; /* Centra la imagen */
+// @media (max-width: 767px) {
+//   .hero_area {
+//     background-attachment: fixed;
+//     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área disponible */
+//     background-position: center; /* Centra la imagen */
 
+//   }
+// }
+@media (max-width: 767px) {
+  .mobile_background_fixed {
+      background-attachment: fixed; /* Hace que la imagen de fondo sea fija */
+      background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+      background-position: center; /* Centra la imagen de fondo */
   }
 }
 
