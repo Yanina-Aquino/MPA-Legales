@@ -75,6 +75,13 @@
         </nav>
       </div>
     </header>
+    <script>
+      window.addEventListener('scroll', function() {
+    var scrolled = window.pageYOffset;
+    var hero = document.getElementById('hero_area');
+    hero.style.backgroundPositionY = -(scrolled * 0.5) + 'px'; // Ajusta la velocidad del parallax cambiando el valor multiplicativo
+});
+    </script>
     <!-- end header section -->
     <!-- slider section -->
     <section id="index" class=" slider_section position-relative">
