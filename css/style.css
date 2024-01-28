@@ -252,6 +252,8 @@ a:focus {
 }
 
 .us_section {
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-image: url(../images/Hero/Hero2.png);
   background-size: cover;
   background-attachment: fixed;
@@ -294,6 +296,8 @@ a:focus {
 @media (max-width: 767px) {
   .us_section {
     background-attachment: fixed; /* Mantener el efecto parallax en dispositivos móviles */
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -514,39 +518,6 @@ a:focus {
 .link-mas:hover {
   background-color: #CBA864; /* Cambiar el fondo a marrón en efecto hover */
   color: white; /* Cambiar el color del texto a blanco en efecto hover */
-}
-
-.heathy_section {
-  background-image: url(../images/Hero/Hero3.png);
-  background-size: cover;
-  background-attachment: fixed;
-  color: #ffffff;
-  text-align: center;
-}
-.heathy_section h2 {
-  font-weight: bold;
-}
-.heathy_section p {
-  margin-top: 35px;
-}
-.heathy_section .btn-box {
-  display: flex;
-  justify-content: center;
-  margin-top: 45px;
-}
-.heathy_section .btn-box a {
-  display: inline-block;
-  padding: 8px 35px;
-  background-color: transparent;
-  border: 1.5px solid #ffffff;
-  color: #ffffff;
-  border-radius: 0;
-  transition: transform 0.3s;
-  text-transform: uppercase;
-}
-.heathy_section .btn-box a:hover {
-  background-color: #ffffff;
-  color: #000000;
 }
 
 @media (max-width: 767px) {
