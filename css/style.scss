@@ -374,7 +374,19 @@ a:focus {
     }
   }
 }
+.us_section .us_container .box .img-box {
+  height: 100px; /* Ajusta la altura según sea necesario */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.us_section .us_container .box .img-box img {
+  max-width: 100%;
+  max-height: 100%; /* Ajusta la altura automáticamente para mantener la proporción */
+  display: block; /* Asegura que la imagen se muestre como bloque para centrarla correctamente */
+  margin: auto; /* Centra horizontalmente */
+}
 
 @media (max-width: 767px) {
 .us_section {
@@ -478,7 +490,6 @@ a:focus {
   background-attachment: fixed;
   color: white;
   text-align: center;
-  padding-bottom: 100px; /* Agregar espacio en la parte inferior */
 
   h2 {
     font-weight: bold;
@@ -505,9 +516,37 @@ a:focus {
     margin-top: 45px;
 
     a {
-      @include hero_btn($white, $black, 8px, 35px, 0);
+      color: white;
+      background-color: #CBA864;
+      padding: 8px 35px;
+      border-radius: 8px;
       text-transform: uppercase;
+
+      /* Efecto hover */
+      transition: all 0.3s ease;
     }
+
+    a:hover {
+      color: black;
+      background-color: white;
+      border: 2px solid white;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .nosotros {
+    padding-bottom: 70px !important; /* Agregar padding-bottom en dispositivos móviles */
+  }
+
+  .row {
+    flex-direction: column; /* Cambiar la dirección de la fila a columna en dispositivos móviles */
+  }
+
+  .col-md-6 {
+    order: -1; /* Mover la columna con la imagen arriba en dispositivos móviles */
+    margin-bottom: 70px; /* Agregar margen inferior para separar la sección siguiente */
   }
 }
 
@@ -799,8 +838,10 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  max-height: 125px;
+  .logo-footer img {
+    max-height: 125px !important; /* Ajusta el tamaño máximo del logo en dispositivos móviles */
   }
+}
 
 .footer a {
   color: white !important;
