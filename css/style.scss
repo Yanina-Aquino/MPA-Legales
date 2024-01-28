@@ -90,9 +90,8 @@ body {
 
 /*header section*/
 .hero_area {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+
   background-image: url(../images/Hero/Hero1.png);
   background-size: cover;
   background-attachment: fixed;
@@ -509,6 +508,7 @@ a:focus {
   background-size: cover;
   background-attachment: fixed;
   color: #333; /* Color de texto */
+  text-align: center;
 }
 @media (max-width: 767px) {
   .more-info_section {
@@ -629,7 +629,7 @@ background-attachment: fixed; /* Mantener el efecto parallax en dispositivos mó
 
 // contact section
 .contact_section {
-  position: relative;
+
   background-image: url(../images/Hero/Hero5.png);
   background-size: cover;
   background-attachment: fixed;
