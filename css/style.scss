@@ -358,6 +358,13 @@ a:focus {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .layout_padding {
+    padding-top: 25px; /* Reduce el padding-top en versión móvil */
+    padding-bottom: 25px; /* Reduce el padding-top en versión móvil */
+  }
+
+}
 
 .hover-img img {
   transition: all 0.3s ease;
@@ -744,8 +751,13 @@ a:focus {
 .logoFooter {
   padding: 20px, 0px;
   text-align: left;
+  max-height: 80%;
 }
 }
+
+@media (max-width: 767px) {
+  max-height: 125px;
+  }
 
 .footer a {
   color: white !important;

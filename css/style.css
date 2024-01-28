@@ -278,6 +278,12 @@ a:focus {
 .us_section .us_container .box .img-box img {
   max-width: 100%;
 }
+@media only screen and (max-width: 767px) {
+  .layout_padding {
+    padding-top: 25px; /* Reduce el padding-top en versión móvil */
+    padding-bottom: 25px; /* Reduce el padding-top en versión móvil */
+  }
+}
 .hover-img img {
   transition: all 0.3s ease;
 }
@@ -616,6 +622,7 @@ a:focus {
 .footer .logoFooter {
   padding: 20px, 0px;
   text-align: left;
+  max-height: 80%;
 }
 
 .footer a {
